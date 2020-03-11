@@ -1,0 +1,56 @@
+/*
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+eval $(ssh-agent -s)
+ssh-add ~/.ssh/id_rsa
+cat locationofkey
+from the above steps you will get key save this key in github ssh key
+
+#to make local repository and link to github central repository
+git remote add origin "url from repository"
+
+# to get files from git repository
+git pull origin master 
+
+#to know status
+	git status
+#to add file to index
+	git add filename
+#to commit , -m to see messages like who committed, it works without this also
+	git commit -m "message"
+#to add multiple files to index
+	git add -A
+#to commit multiple files at a time
+	git commit -a -m "message"
+#to know logs
+	git log
+=============================================
+branching
+
+#to create a branch
+	git branch branchname
+#switch to branch
+	git checkout nameofbranch
+#list of files
+	ls
+
+based on branch name check the presence of file with help of git checkout and ls cmd
+============================================
+#to rewind operation(?)
+	git rebase master
+	git rebase branchname
+
+=======================
+#to push branch or file
+	git push orign branchname
+
+======================
+
+#to uncommit the changes to a file
+	write 1st time and commit with message -m
+	write 2nd time and commit with message -m
+	git log
+get first 8 digit hexadecimal code 
+do below line twice
+	git checkout code filename
+	git checkout code filename
+	cat filname
